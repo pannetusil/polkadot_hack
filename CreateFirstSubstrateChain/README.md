@@ -25,5 +25,5 @@ To Run a temporary node in development mode `./target/release/node-template --de
 Now, just missing is the frontend `yarn start`
 
 
-![It works](figs/Tut1_running.png)
+![It works](https://github.com/pannetusil/polkadot_hack/blob/main/figs/Tut1_running.PNG)
 
