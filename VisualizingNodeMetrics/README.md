@@ -3,17 +3,20 @@ This tutorial builds on previous one, so we need functional Substate template no
 
 We need to install Grafana and Prometheus. 
 
-First we need to start the node: 
+First we need to purge all content and start the node: 
 `./target/release/node-template purge-chain --dev -y`
+`./target/release/node-template --dev --tmp`
 
 Now when it is working, we need to start the prometheus (preferrebly in Docker container) and modify the `prometheus.yml` file. 
 `docker run -p 9090:9090 -v /path/to/file/prometheus.yml:/etc /prometheus/prometheus.yml prom/prometheus`
 
 This was a bit challenging due to my setup - Windows and WSL2.
-To add the port and address to the Windows host, I have to add the follwoing firewall rule: 
-`netsh interface portproxy add v4tov4 listenport=9090 listenaddress=0.0.0.0 connectport=3000 connectaddress=<ip>`
+At the end, the best way is to setup a remote desktop session and connect to the WSL2. 
+Now, we start the Grafana, login, and enhance the dashboard provided by Substrate
+`sudo service grafana-server start`
 
 ![It works](https://github.com/pannetusil/polkadot_hack/blob/main/figs/Tut2_response.PNG)
+![It works](https://github.com/pannetusil/polkadot_hack/blob/main/figs/Tut2_dashboard.PNG)
 
 
 ## Resources
@@ -22,3 +25,4 @@ To add the port and address to the Windows host, I have to add the follwoing fir
 [3] https://docs.docker.com/desktop/windows/wsl/
 [4] https://prometheus.io/docs/prometheus/latest/installation/
 [5] https://grafana.com/grafana/?pg=get&plcmt=selfmanaged-box1-cta1
+[6] https://www.nextofwindows.com/how-to-enable-wsl2-ubuntu-gui-and-use-rdp-to-remote
