@@ -1,4 +1,4 @@
-# Visualizing Node Metrics
+# Visualizing Node Metrics - https://substrate.dev/docs/en/tutorials/visualize-node-metrics/
 This tutorial builds on previous one, so we need functional Substate template node.
 
 We need to install Grafana and Prometheus. 

@@ -1,3 +1,4 @@
+# Build a permissioned network - https://substrate.dev/docs/en/tutorials/build-permission-network/
 # Add node-authorization pallet
 `git clone -b latest --depth 1 https://github.com/substrate-developer-hub/substrate-node-template`
 # From the working directory, create a new branch and check it out

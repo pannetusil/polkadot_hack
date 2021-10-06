@@ -1,4 +1,7 @@
+# Create your first substrate chain - https://substrate.dev/docs/en/tutorials/create-your-first-substrate-chain/
+
 # Setup up your computer
+
 Starting wih cloning the repo: `git clone -b latest --depth 1 https://github.com/substrate-developer-hub/substrate-node-template`
 
 Navigate to the repo `cd substrate-node-template`
